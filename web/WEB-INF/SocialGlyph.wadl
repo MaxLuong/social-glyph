@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application xmlns="http://wadl.dev.java.net/2009/02">
+    <doc xmlns:jersey="http://jersey.java.net/" jersey:generatedBy="Jersey: 1.12 02/15/2012 05:30 PM"/>
+    <resources base="http://2.social-glyph.appspot.com/">
+        <resource path="/SocialGlyph/{locationString}">
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="locationString" style="template" type="xs:string"/>
+            <method id="getLocationData" name="GET">
+                <response>
+                    <representation mediaType="application/json"/>
+                </response>
+            </method>
+            <method id="buttonSelected" name="POST">
+                <request>
+                    <representation mediaType="*/*"/>
+                </request>
+            </method>
+        </resource>
+    </resources>
+</application>
