@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html ng-app="socialGlyphApp">
+<head>
+    <title>Social Glyph</title>
+    <link rel="stylesheet" href="css/Social.css">
+    <link rel="stylesheet" href="css/cardui.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body ng-controller="socialGlyphAppCtrl">
+<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<script src="js/jquery.color.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<!--
+<script src="lib/angular/angular.js"></script>
+-->
+<script src="js/controllers.js"></script>
+<div id="container" class="container" ng-hide="showError">
+
+    <div ng-repeat="socialNetwork in socialNetworks" id="{{socialNetwork.name}}" class="card" onclick="clickAnimation(this)" ng-click="selectThis(socialNetwork.name)">
+        <div id="{{socialNetwork.name}}Logo" class="{{socialNetwork.name}}Logo media inline"></div>
+        <div id="{{socialNetwork.name}}Title" class="title">{{socialNetwork.text}}</div>
+    </div>
+
+</div>
+<div id="errorcontainer" class="errorcontainer" ng-show="showError">
+    <div id="error" class="card" style="margin-left:auto; margin-right:auto;">
+        <div id="errorIcon" class="media inline"></div>
+        <div class="title">Oops!</div>
+        <div class="content">No social networks were found.</div>
+    </div>
+</div>
+
+<script>
+    function clickAnimation(name)
+    {
+        jQuery(name).animate(
+        {
+            backgroundColor: "#FFF68F"
+        }, 500, function()
+        {
+            jQuery(name).animate(
+            {
+                backgroundColor: "white"
+            }, 500)
+        });
+    }
+</script>
+</body>
+</html>
