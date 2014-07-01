@@ -23,7 +23,7 @@
       <div id="IntroText" class="title" style="text-align: center;">
         Tap on any of the icons below to follow us on our social networks.
       </div>
-      <div ng-repeat="socialNetwork in socialNetworks" id="{{socialNetwork.name}}" class="card animated" onclick="jQuery(this).addClass('tada');" ng-click="selectThis(socialNetwork.name)" onload="jQuery(this).addClass('bounceInUp');" >
+      <div ng-repeat="socialNetwork in socialNetworks" id="{{socialNetwork.name}}" class="card animated" onclick="jQuery(this).addClass('tada');" ng-click="selectThis(socialNetwork.name)">
         <div id="{{socialNetwork.name}}Logo" class="{{socialNetwork.name}}Logo media inline"></div>
         <div id="{{socialNetwork.name}}Title" class="title">{{socialNetwork.text}}</div>
       </div>
