@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/Social.css">
     <link rel="stylesheet" href="css/cardui.css"/>
     <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/animate.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -38,16 +39,7 @@
     <script>
       function clickAnimation(name)
       {
-        jQuery(name).animate(
-          {
-            backgroundColor: "#FFF68F"
-          }, 500, function()
-          {
-            jQuery(name).animate(
-              {
-                backgroundColor: "white"
-              }, 500)
-              });
+        jQuery(name).addClass('animated tada');
       }
     </script>
   </body>
