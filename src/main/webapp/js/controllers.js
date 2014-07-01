@@ -20,9 +20,6 @@ socialGlyphApp.controller('socialGlyphAppCtrl', function socialGlyphAppCtrl($sco
 
         $scope.selectThis=function(selectedNetwork)
         {
-            //TODO animate the click
-
-
             for (var i=0;i<$scope.socialNetworks.length;i++)
             {
                 console.log($scope.socialNetworks[i].name);

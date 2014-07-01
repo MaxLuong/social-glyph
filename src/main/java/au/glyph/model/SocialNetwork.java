@@ -17,7 +17,7 @@ public enum SocialNetwork
 	YELP("yelp", "Review us on Yelp"),
 //	FACEBOOKLIKE("facebookLike", "Facebook"),
 	TWITTER("twitter", "Follow us on Twitter"),
-	FOURSQUARE("fourSquare", "Check in on FourSquare");
+	FOURSQUARE("fourSquare", "Be mayor on Foursquare");
 
 	private String name;
 	private String description;
